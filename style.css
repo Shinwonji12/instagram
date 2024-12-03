@@ -1,0 +1,184 @@
+/* 기본 스타일 */
+body {
+    margin: 0;
+    font-family: Arial, sans-serif;
+}
+
+/* 헤더 스타일 */
+header {
+    padding: 5px;
+    background-color: #f8f8f8;
+    border-bottom: 2px solid #ccc;
+}
+
+
+.header-container {
+    display: flex; /* Flexbox 활성화 */
+    align-items: flex-start; /* 세로 정렬: 상단 기준 */
+    justify-content: flex-start; /* 가로 정렬: 왼쪽 기준 */
+    gap: 20px; /* 로고와 검색창 사이 간격 */
+}
+
+/* 로고 컨테이너 */
+.logo-container img {
+    width: 200px; /* 로고 크기 */
+    height: auto; /* 비율 유지 */
+    margin: 20px;
+}
+
+
+/* 검색 영역 스타일 */
+.search-container {
+    display: flex; /* Flexbox로 검색 버튼과 입력창 정렬 */
+    flex-direction: row-reverse;
+    align-items: center; /* 버튼과 입력창의 세로 정렬 */
+    gap: 10px; /* 버튼과 입력창 사이 간격 */
+    margin-top: 30px;
+    text-align: center;
+}
+
+
+.search-toggle {
+    padding: 8px 15px;
+    font-size: 14px;
+    background-color: #5888A6;
+    color: #fff;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+.search-input {
+
+    padding: 8px;
+    font-size: 14px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    width: 200px;
+    transition: all 0.3s ease;
+}
+
+/* 아이콘 컨테이너 */
+.icon-container{
+
+    display: flex; /* Flexbox 활성화 */
+    align-items: flex-start; /* 세로 정렬: 상단 기준 */
+    justify-content: flex-start; /* 가로 정렬: 왼쪽 기준 */
+    margin: 10px;
+    width: 60px;
+    height: auto;
+
+
+}
+
+.home{
+    margin: 10px;
+    margin-top: 20px;
+}
+
+.paperplane{
+    margin: 10px;
+    margin-top: 20px;
+}
+
+.compass{
+    margin: 10px;
+    margin-top: 20px;
+}
+
+.heart{
+    margin: 10px;
+    margin-top: 20px;
+}
+
+
+/* 프로필 영역 */
+
+
+.profile-section{
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+
+/* 프로필 사진 */
+.profile-image img{
+    width: 100%;  /* 부모 요소에 맞게 크기 조정 */
+    height: 100%; /* 부모 요소에 맞게 크기 조정 */
+    object-fit: cover; /* 이미지가 원형 영역을 꽉 채우도록 비율 유지하면서 잘리게 처리 */
+    display: block; /* 기본적으로 block으로 표시 */
+}
+
+.profile-image{
+    width: 120px;    /* 고정된 너비 */
+    height: 120px;   /* 고정된 높이 */
+    border-radius: 50%; /* 원형 이미지 */
+    border: 3px solid #ccc;
+    display: flex;
+    margin: 20px;
+    justify-content: center;
+    align-items: center;
+    background-color: #f0f0f0; /* 이미지가 없을 때의 배경색 */
+    position: relative;
+    overflow: hidden; /* 원형 영역을 벗어나지 않도록 */
+}
+
+.profile-initials {
+    font-size: 16px;
+    font-weight: bold;
+    color: #888;
+    text-align: center;  /* 가로 중앙 정렬 */
+    display: flex;       /* Flexbox 활성화 */
+    justify-content: center; /* 가로 중앙 정렬 */
+    align-items: center; /* 세로 중앙 정렬 */
+    position: absolute; /* 원형 영역의 정확한 중앙 배치를 위해 사용 */
+    top: 50%; /* 세로 중앙 */
+    left: 50%; /* 가로 중앙 */
+    transform: translate(-50%, -50%); /* 정확한 중앙 정렬 */
+    background-color: #f0f0f0; /* 배경 색상 (이미지 없을 때) */
+    width: 100%;  /* 부모의 크기와 동일하게 맞춰서 원형 영역을 꽉 채움 */
+    height: 100%; /* 부모의 크기와 동일하게 맞춰서 원형 영역을 꽉 채움 */
+    display: none;
+}
+
+/* 이미지가 있을 경우 대체 텍스트 숨기기 */
+.profile-image img:valid ~ .profile-initials {
+    display: none; /* 이미지가 로드되면 대체 텍스트 숨김 */
+}
+
+/* 이름 */
+.profile-info h2 {
+    margin: 0;
+    font-size: 24px;
+    font-weight: bold;
+}
+
+/* 아이디, 아이콘 배치 */
+.user-info{
+    display: flex;
+    align-items: baseline; /* 수직 중앙 정렬 */
+    gap: 10px; /* 아이디와 아이콘 간격 */
+}
+
+/* 아이디 */
+.profile-info .user-id {
+    font-size: 16px;
+    color: #888;
+    margin-top: 5px;
+}
+
+/* 프로필 편집 버튼 */
+.profile-info .edit-profile-btn {
+    display: block;
+    border: #ffffff;
+    color: #ffffff;
+    background-color: #5888A6;
+    border-radius: 5px;
+    border-style: solid;
+    text-align: center;
+    width: 250px;
+    height: 25px;
+}
+
+
+
